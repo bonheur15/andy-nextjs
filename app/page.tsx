@@ -10,3 +10,4 @@ export default async function Home() {
     </div>
   );
 }
+const dynamic = "force-dynamic";
