@@ -11,6 +11,7 @@ app {
   port = 3000
 
   primary_region = "kgl"
+  regions        = ["kgl", "fsn"]
 
   compute {
     cpu      = 1
