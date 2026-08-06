@@ -1,14 +1,11 @@
-import Image from "next/image";
-import { getIp } from "./action";
+import { getSystemInfo } from "./action";
+import { TerminalApp } from "./components/terminal-app";
 
 export default async function Home() {
-  const ip = await getIp();
-
+  const system = await getSystemInfo();
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <div>{ip}</div>
-      <div>Hello world 23</div>
-    </div>
+    <main className="term-main">
+      <TerminalApp system={system} initialCwd={system.home} />
+    </main>
   );
 }
-const dynamic = "force-dynamic";
